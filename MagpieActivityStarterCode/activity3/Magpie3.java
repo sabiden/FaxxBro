@@ -45,6 +45,40 @@ public class Magpie3
 		{
 			response = "Tell me more about your family.";
 		}
+		
+		else if (findKeyword(statement, "no") >= 0)
+		{
+			response = "Why so negative?";
+		}
+		else if (findKeyword(statement, "dog") >= 0
+				|| findKeyword(statement, "cat") >= 0
+				|| findKeyword(statement, "fish") >= 0
+				|| findKeyword(statement, "gerbil") >= 0)
+		{
+			response = "Tell me more about your pets.";
+		}
+		else if (findKeyword(statement, "Mr") >= 0
+				|| findKeyword(statement, "Mrs") >= 0
+				|| findKeyword(statement, "Ms") >= 0
+				|| findKeyword(statement, "Coach") >= 0)
+		{
+			response = "They sound like a great role model";
+		}
+		else if (findKeyword(statement, "m8") >= 0
+				|| findKeyword(statement, "m80") >= 0
+				|| findKeyword(statement, "matey") >= 0
+				|| findKeyword(statement, "mate") >= 0)
+		{
+			response = "AYE M8 WALK THE PLANK";
+		}
+		else if (findKeyword(statement, "Love") >= 0
+				|| findKeyword(statement, "lover") >= 0
+				|| findKeyword(statement, "kiss") >= 0
+				|| findKeyword(statement, "kiss") >= 0)
+		{
+			response = "WHAT IS LOVEEEE.";
+		}
+		
 		else
 		{
 			response = getRandomResponse();
@@ -161,7 +195,7 @@ public class Magpie3
 		}
 		else if (whichResponse == 3)
 		{
-			response = "You don't say.";
+			response = "Wowza.";
 		}
 
 		return response;
